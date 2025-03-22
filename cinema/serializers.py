@@ -24,7 +24,6 @@ class MovieSerializer(serializers.Serializer):
         movie.genres.add(*genres)
         return movie
 
-
     def update(self, instance, validated_data):
         instance.title = validated_data.get("title", instance.title)
         instance.description = validated_data.get(
